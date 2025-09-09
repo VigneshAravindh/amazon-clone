@@ -13,11 +13,15 @@ package-lock.json
 # production
 /build
 
+# Firebase config
+src/firebase.js
+
 # Firebase local config
 .firebase/
 .firebaserc
 
 # misc
+.env
 .DS_Store
 .env.local
 .env.development.local
