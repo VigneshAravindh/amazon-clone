@@ -1,0 +1,40 @@
+.home {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1500px;
+  flex-direction: column; /* stack content on mobile */
+}
+
+.home__container {
+  width: 100%;
+}
+
+.home__row{
+    display: flex;
+    flex-wrap: wrap; /* wrap products on small screens */
+    z-index: 1;
+    margin: 5px;
+    justify-content: center;
+}
+
+.home__image{
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -150px;
+    object-fit: cover; /* make image scale nicely */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .home__row {
+    flex-direction: column; /* stack products vertically */
+    margin: 0;
+  }
+
+  .home__image {
+    margin-bottom: -50px; /* less negative margin on mobile */
+    height: auto;
+  }
+}
